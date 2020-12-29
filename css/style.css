@@ -1,0 +1,74 @@
+.dark-mode{
+    padding-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+.theme-switch{
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input{
+    display: none;
+}
+
+.slider{
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: white url('../img/night.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:checked + .slider:before{
+    transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    -webkit-transform: translateX(24px);
+    background: white url('../img/sunny.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:checked + .slider{
+    background-color: #fff;
+}
+
+.slider.round{
+    border-radius: 34px;
+}
+
+.slider.round:before{
+    border-radius: 50%;
+}
